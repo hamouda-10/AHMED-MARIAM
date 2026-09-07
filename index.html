@@ -1668,3 +1668,56 @@ t_onReady(function () {
     <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"b5ced73ff4dc4dcc9379349e59fd4506","r":1,"spa":2}' crossorigin="anonymous"></script>
   </body>
 </html>
+<style>
+/* MOBILE INTRO SAFETY FIX */
+#weiOverlay {
+    z-index: 999999 !important;
+}
+
+#weiOverlay.wei-hidden {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+@media screen and (max-width: 767px) {
+    #weiOverlay {
+        transition: opacity .5s ease !important;
+    }
+}
+</style>
+
+<script>
+(function () {
+
+    function removeIntro() {
+        var overlay = document.getElementById('weiOverlay');
+
+        if (!overlay) return;
+
+        overlay.classList.add('wei-hidden');
+
+        overlay.style.opacity = '0';
+        overlay.style.visibility = 'hidden';
+        overlay.style.pointerEvents = 'none';
+
+        setTimeout(function () {
+            overlay.style.display = 'none';
+        }, 600);
+    }
+
+    /* لو الـIntro اشتغل طبيعي */
+    window.addEventListener('webgencyIntroDone', removeIntro);
+
+    /* Safety fallback:
+       لو الـJavaScript فشل في تشغيل الـIntro،
+       الموقع يفتح بدل ما يفضل البيج مغطيه */
+    window.addEventListener('load', function () {
+        setTimeout(removeIntro, 3500);
+    });
+
+    /* للموبايلات البطيئة */
+    setTimeout(removeIntro, 6000);
+
+})();
+</script>
