@@ -140,21 +140,28 @@
   <body class="t-body" style="margin:0;">
     <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="11836131" data-tilda-page-id="167438503" data-tilda-page-alias="ahmedandmariam" data-tilda-formskey="b9e82ac5385c1bce198c7c2711836131" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="one" data-tilda-project-country="NL">
       
-      <!-- Rec 1 (Intro Cover) -->
+    <!-- Rec 1 (Intro Cover) -->
       <div id="rec2684631903" class="r t-rec" style="" data-animationappear="off" data-record-type="131">
         <div class="t123">
           <div class="t-container_100">
             <div class="t-width t-width_100">
               <style>
+                /* يجب أن تكون الاستدعاءات (imports) في أعلى الكود دائماً */
                 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&display=swap');
+
                 #weiOverlay { position: fixed; inset: 0; z-index: 99999; background: #F9F0E0; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none; transition: opacity 1.4s ease; }
                 #weiImg { width: 100%; max-width: 440px; display: block; object-fit: contain; }
-                #weiTapWrap { position: absolute; bottom: 30%; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 7px; animation: weiTapIn 1.2s 0.8s both; }
+                
+                #weiTapWrap { position: absolute; bottom: 25%; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 7px; animation: weiTapIn 1.2s 0.8s both; z-index: 100000; }
                 @keyframes weiTapIn { from { opacity: 0; transform: translateX(-50%) translateY(6px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
-                #weiTapLabel { font-family: 'Cinzel', Georgia, serif; font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(140, 100, 60, 0.75); animation: weiPulse 2.4s 1.6s ease-in-out infinite; white-space: nowrap; }
-                @keyframes weiPulse { 0%, 100% { opacity: 0.45; letter-spacing: 0.26em; } 50% { opacity: 1; letter-spacing: 0.30em; } }
-                .wei-chevron { width: 10px; height: 10px; border-right: 1.5px solid rgba(140, 100, 60, 0.6); border-top: 1.5px solid rgba(140, 100, 60, 0.6); transform: rotate(-45deg); animation: weiChevron 2.4s 1.9s ease-in-out infinite; }
-                @keyframes weiChevron { 0%, 100% { transform: rotate(-45deg) translate(0, 0); opacity: 0.6; } 50% { transform: rotate(-45deg) translate(2px, -2px); opacity: 1; } }
+                
+                #weiTapLabel { font-family: 'Aref Ruqaa', serif; font-size: 26px; color: rgba(140, 100, 60, 0.95); animation: weiPulse 2s ease-in-out infinite; white-space: nowrap; margin-top: 5px; text-shadow: 0px 2px 4px rgba(249, 240, 224, 0.8); }
+                @keyframes weiPulse { 0%, 100% { opacity: 0.6; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-4px); } }
+                
+                .wei-chevron { width: 14px; height: 14px; border-right: 2.5px solid rgba(140, 100, 60, 0.85); border-top: 2.5px solid rgba(140, 100, 60, 0.85); transform: rotate(-45deg); animation: weiChevron 2s ease-in-out infinite; margin-bottom: 5px; }
+                @keyframes weiChevron { 0%, 100% { transform: rotate(-45deg) translate(0, 0); opacity: 0.6; } 50% { transform: rotate(-45deg) translate(-4px, -4px); opacity: 1; } }
+                
                 #weiVideoWrap { position: fixed; inset: 0; z-index: 100000; display: flex; align-items: center; justify-content: center; background: #F9F0E0; opacity: 1; transition: opacity 0.8s ease; pointer-events: none; }
                 #weiVideoWrap.wei-video-in { opacity: 1; pointer-events: all; }
                 #weiVideoWrap.wei-video-out { opacity: 0; transition: opacity 1.4s ease; }
@@ -166,10 +173,12 @@
                 <source src="" type="audio/mp3">
               </audio>
               <div id="weiOverlay">
+                <!-- تم استرجاع رابط صورة الظرف هنا لكي لا ينكسر التصميم على الموبايل -->
                 <img id="weiImg" src="https://pub-96ce671efbac4dbfbc89b044c631a913.r2.dev/ChatGPT%20Image%20Jul%2027%2C%202026%2C%2001_02_07%20AM.png" alt="Open your invitation" draggable="false">
+                
                 <div id="weiTapWrap">
                   <div class="wei-chevron"></div>
-                  <div id="weiTapLabel">Tap to open</div>
+                  <div id="weiTapLabel">اضغط هنا</div>
                 </div>
               </div>
               <div id="weiVideoWrap">
@@ -189,7 +198,6 @@
           </div>
         </div>
       </div>
-
       <!-- Rec 2 -->
       <div id="rec2684632103" class="r t-rec" style="" data-animationappear="off" data-record-type="396">
         <style>
